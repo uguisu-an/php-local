@@ -12,16 +12,42 @@ require_once "./init.php";
 require_once "./env.php";
 require_once "./db.php";
 
-$link = db\connect(env\get_db_config());
-if (!$link) {
+$mysqli = db\connect(env\get_db_config());
+if (!$mysqli) {
   die();
 }
-
-$city = $link->query("SELECT * FROM city");
-var_dump($city);
-
-db\disconnect($link);
 ?>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>country code</th>
+      <th>district</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    $cities = $mysqli->query("SELECT * FROM city");
+    if ($cities) {
+      while ($city = $cities->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>".$city["ID"]."</td>";
+        echo "<td>".$city["Name"]."</td>";
+        echo "<td>".$city["CountryCode"]."</td>";
+        echo "<td>".$city["District"]."</td>";
+        echo "<td>".$city["Population"]."</td>";
+        echo "</tr>";
+      }
+      $cities->free();
+    }
+    ?>
+  </tbody>
+</table>
+
+<?php $mysqli->close(); ?>
 
 </body>
 </html>
