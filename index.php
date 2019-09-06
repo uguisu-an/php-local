@@ -11,7 +11,7 @@
 require_once "./init.php";
 require_once "./env.php";
 
-echo env\get_db_name();
+echo env\get_db_config()["name"];
 ?>
 
 </body>

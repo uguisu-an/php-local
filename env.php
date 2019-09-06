@@ -1,20 +1,13 @@
 <?php
 namespace env;
 
-function get_db_host() {
-  return get_env("DB_HOST", "localhost");
-}
-
-function get_db_name() {
-  return get_env("DB_NAME", "root");
-}
-
-function get_db_user() {
-  return get_env("DB_USER", "root");
-}
-
-function get_db_password() {
-  return get_env("DB_PASSWORD", "root");
+function get_db_config() {
+  return array(
+    "host" => get_env("DB_HOST", "localhost"),
+    "name" => get_env("DB_NAME", "root"),
+    "user" => get_env("DB_USER", "root"),
+    "password" => get_env("DB_PASSWORD", "root")
+  );
 }
 
 function get_env($key, $defaultValue) {
