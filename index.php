@@ -7,6 +7,12 @@
   <title>Hello World</title>
 </head>
 <body>
-  <?php include "./hello.php"; ?>
+<?php
+require_once "./init.php";
+require_once "./env.php";
+
+echo env\get_db_name();
+?>
+
 </body>
 </html>
