@@ -8,5 +8,8 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^3.5"
+    },
+    "config": {
+        "vendor-dir": "public_html/vendor"
     }
 }
