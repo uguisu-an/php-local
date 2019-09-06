@@ -6,8 +6,7 @@ function connect($config) {
     $config["host"],
     $config["user"],
     $config["password"],
-    $config["name"],
-    $config["port"]
+    $config["name"]
   );
 }
 

@@ -10,7 +10,6 @@ services:
     depends_on:
       - php
   php:
-    image: php:7.3-fpm
+    build: ./docker/php
     volumes:
-      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
       - ./public_html:/var/www/html
