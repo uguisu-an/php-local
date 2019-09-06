@@ -1,2 +1,7 @@
 # php-local
-phpをローカルで動かす
+
+install 
+
+```
+composer install
+```

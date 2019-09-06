@@ -1,0 +1,10 @@
+{
+    "name": "iimasamitsu/php-local",
+    "authors": [
+        {
+            "name": "ii masamitsu",
+            "email": "ii@entap.co.jp"
+        }
+    ],
+    "require": {}
+}
