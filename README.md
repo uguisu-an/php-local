@@ -6,10 +6,16 @@ install
 composer install
 ```
 
-serve
+start
 
 ```
-docker-compose up --build
+docker-compose up -d --build
+```
+
+stop
+
+```
+docker-compose stop
 ```
 
 open http://localhost:8080 on your favorite browser!

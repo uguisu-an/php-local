@@ -17,6 +17,7 @@ services:
       - mysql
     links:
       - mysql
+    env_file: ./docker/php/.env.development
   mysql:
     build: ./docker/mysql
     env_file: ./docker/mysql/.env.development
