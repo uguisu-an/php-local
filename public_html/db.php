@@ -8,7 +8,7 @@ function connect($config) {
   //   $config["password"],
   //   $config["name"]
   // );
-  return \mysqli_connect();
+  return \mysqli_connect("mysql", "user", "password", "world", 3306, "/var/run/mysqld/mysqld.sock");
 }
 
 function disconnect($link) {

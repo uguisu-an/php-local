@@ -16,6 +16,10 @@ $link = db\connect(env\get_db_config());
 if (!$link) {
   die();
 }
+
+$city = $link->query("SELECT * FROM city");
+var_dump($city);
+
 db\disconnect($link);
 ?>
 
