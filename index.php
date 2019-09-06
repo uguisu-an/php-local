@@ -10,8 +10,13 @@
 <?php
 require_once "./init.php";
 require_once "./env.php";
+require_once "./db.php";
 
-echo env\get_db_config()["name"];
+$link = db\connect(env\get_db_config());
+if (!$link) {
+  die();
+}
+db\disconnect($link);
 ?>
 
 </body>
