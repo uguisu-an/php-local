@@ -14,4 +14,3 @@ function get_env($key, $defaultValue) {
   $value = getenv($key);
   return $value ? $value : $defaultValue;
 }
-?>

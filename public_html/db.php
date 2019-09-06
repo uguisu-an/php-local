@@ -9,4 +9,3 @@ function connect($config) {
     $config["name"]
   );
 }
-?>
