@@ -6,5 +6,7 @@
             "email": "ii@entap.co.jp"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^3.5"
+    }
 }
